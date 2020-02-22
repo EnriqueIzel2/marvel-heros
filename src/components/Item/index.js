@@ -1,13 +1,11 @@
 import React from 'react';
 import {TouchableOpacity, Image, Text} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 import styles from './styles';
 
-const Item = ({item, navigation}) => {
-  const _onItemPress = hero => {
-    navigation.navigate('Description', {hero: hero});
-  };
-
+const Item = ({item}) => {
+  const navigation = useNavigation();
   return (
     <TouchableOpacity
       style={styles.Card}
