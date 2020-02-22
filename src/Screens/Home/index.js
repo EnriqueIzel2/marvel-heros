@@ -4,7 +4,7 @@ import api from '../../services/api';
 import Item from '../../components/Item';
 import styles from './styles';
 
-export default function Home({navigation}) {
+export default function Home({navigation: {navigate}}) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -26,14 +26,11 @@ export default function Home({navigation}) {
     <>
       <FlatList
         data={data}
-        renderItem={Item}
+        renderItem={({item}) => <Item item={item} />}
         keyExtractor={item => item.id.toString()}
         ItemSeparatorComponent={() => <View style={styles.Container} />}
       />
-      <Button
-        title="To Description"
-        onPress={() => navigation.navigate('Description')}
-      />
+      <Button title="To About" onPress={() => navigate('About')} />
     </>
   );
 }
