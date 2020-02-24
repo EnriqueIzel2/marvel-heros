@@ -60,4 +60,4 @@ buck-out/
 
 # Não usados
 __tests__
-./src/services/publicAndPrivateKey.js
+/src/services/publicAndPrivateKey.js
