@@ -1,8 +1,8 @@
 import axios from 'axios';
 import md5 from 'js-md5';
 
-const PUBLIC_KEY = 'e5c690a87b4a4141888bfda0816b329d';
-const PRIVATE_KEY = '18dc8db2176d209e9908003ce79f1fa1a3d9d044';
+import {PUBLIC_KEY, PRIVATE_KEY} from './publicAndPrivateKey';
+
 const URL = 'https://gateway.marvel.com/v1/public/characters?';
 
 const timestamp = Number(new Date());
