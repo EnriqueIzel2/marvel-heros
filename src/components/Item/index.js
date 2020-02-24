@@ -9,7 +9,7 @@ const Item = ({item}) => {
   return (
     <TouchableOpacity
       style={styles.Card}
-      onPress={() => navigation.navigate('Description')}>
+      onPress={() => navigation.navigate('Description', {hero: item})}>
       <Image
         style={styles.Avatar}
         source={{uri: `${item.thumbnail.path}.${item.thumbnail.extension}`}}

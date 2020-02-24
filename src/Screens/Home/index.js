@@ -16,7 +16,7 @@ export default function Home({navigation: {navigate}}) {
           setData(responseJson.results);
         })
         .catch(error => {
-          console.log('Perdeu playboy');
+          console.log('Error', error);
         });
     }
     getHeros();
