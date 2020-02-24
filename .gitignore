@@ -60,3 +60,4 @@ buck-out/
 
 # Não usados
 __tests__
+puclicAndPrivateKey.js
